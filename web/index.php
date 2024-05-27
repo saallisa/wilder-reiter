@@ -6,6 +6,9 @@ declare(strict_types=1);
 // WILDER REITER - HAUPTDATEI
 // ----------------------------------------------------------------------
 
+// Binde die allgemeinen Funktionen ein.
+include __DIR__ . '/../source/functions/general.php';
+
 // Binde die Template Engine und ihre Konfiguration ein.
 include __DIR__ . '/../config/template.php';
 include __DIR__ . '/../source/functions/template.php';
