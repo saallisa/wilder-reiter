@@ -6,6 +6,19 @@ declare(strict_types=1);
 // WILDER REITER - HAUPTDATEI
 // ----------------------------------------------------------------------
 
+// Überprüfe, ob ein Cookie gesetzt wurde, dass Cookies erlaubt sind.
+if (isset($_COOKIE['ConsentCookie'])) {
+    // Falls ja, starte die Session, welche ebenfalls ein Cookie ist.
+    session_start([
+        // So lange bleibt die Session in Sekunden gespeichert:
+        'cookie_lifetime' => 7200,
+        // Die nachfolgenden Optionen sorgen für mehr Sicherheit:
+        'cookie_httponly' => '1',
+        'cookie_samesite' => 'Strict'
+    ]);
+}
+
+
 // Binde die allgemeinen Funktionen ein.
 include __DIR__ . '/../source/functions/general.php';
 
