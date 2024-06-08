@@ -1,1 +1,1 @@
-<h1>Wilder Reiter</h1>
+<h2>Herzlich willkommen!</h2>

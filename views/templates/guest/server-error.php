@@ -1,1 +1,1 @@
-<h1>Interner Serverfehler</h1>
+<h2>Interner Serverfehler</h2>

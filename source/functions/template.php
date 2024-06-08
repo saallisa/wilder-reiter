@@ -14,6 +14,7 @@ function renderFile(string $file, array $params = []): string
     // Starte den Ausgabe-Puffer.
     ob_start();
 
+    // Überprüfe, ob die Template-Datei existiert
     if (file_exists($file)) {
         // Falls ja, entpacke die Parameter in Variablen...
         extract($params);
