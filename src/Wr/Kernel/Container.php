@@ -28,6 +28,7 @@ class Container
         }
 
         $this->definitions = $definitions;
+        $this->instances[Container::class] = $this;
     }
 
     /**

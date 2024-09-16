@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
+use App\Handler\HomeHandler;
+
 use Wr\Kernel\Autoloader;
 use Wr\Kernel\Container;
-use Wr\Kernel\View;
 
 // Configure autoload
 require __DIR__ . '/../src/Wr/Kernel/Autoloader.php';
@@ -18,5 +19,5 @@ $container = new Container(
     include(__DIR__ . '/../app/config/dependencies.php')
 );
 
-$view = $container->get(View::class);
-echo $view->render('home');
+$handler = $container->get(HomeHandler::class);
+echo $handler->handle();
