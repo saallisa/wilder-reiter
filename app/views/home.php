@@ -1,10 +1,3 @@
-<!DOCTYPE html>
+<?php $this->layout('layout'); ?>
 
-<html lang="de">
-<head>
-    <title>Wilder Reiter</title>
-</head>
-<body>
-    <h1>Wilder Reiter</h1>
-</body>
-</html>
+<h1>Wilder Reiter</h1>
