@@ -14,11 +14,9 @@ $autoload->addNamespace('App', __DIR__.'/../src/App/');
 $autoload->addNamespace('Wr', __DIR__.'/../src/Wr/');
 $autoload->register();
 
-$container = new Container([
-    View::class => function(Container $container) {
-        return new View(__DIR__ . '/../app/views/');
-    },
-]);
+$container = new Container(
+    include(__DIR__ . '/../app/config/dependencies.php')
+);
 
 $view = $container->get(View::class);
 echo $view->render('home');
